@@ -1,3 +1,8 @@
+# node.js
+#
 node_modules/
-package-lock.json
-*.txt
+npm-debug.log
+yarn-error.log
+
+# ignore all txt files
+.txt
