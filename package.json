@@ -1,8 +1,8 @@
 {
-  "name": "tabuada-04",
+  "name": "tabuada-node",
   "version": "0.0.1",
   "description": "",
-  "main": "app.js",
+  "main": "tabuada.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "base3": "node app --base=3"
