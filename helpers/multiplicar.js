@@ -4,24 +4,28 @@ const colors = require("colors");
 
 const addLeadingzero = (num) => (num >= 10 ? num : `0${num}`);
 
-const createATextFile = async (base = 5, listar = false) => {
+const createATextFile = async (
+  multiplicador = 5,
+  listar = false,
+  multiplicando = 10
+) => {
   try {
     let output = "";
 
-    for (let i = 1; i <= 10; i++) {
-      output += `${addLeadingzero(base)} x ${addLeadingzero(
+    for (let i = 1; i <= multiplicando; i++) {
+      output += `${addLeadingzero(multiplicador)} x ${addLeadingzero(
         i
-      )} = ${addLeadingzero(base * i)}\n`;
+      )} = ${addLeadingzero(multiplicador * i)}\n`;
     }
 
     if (listar) {
-      console.log(`${"Tabuada de".yellow} ${colors.yellow(base)}`);
+      console.log(`${"Tabuada de".yellow} ${colors.yellow(multiplicador)}`);
       console.log(output);
     }
 
-    fs.writeFileSync(`tabuada-de-${base}.txt`, output);
+    fs.writeFileSync(`tabuada-de-${multiplicador}.txt`, output);
 
-    return `tabuada-de-${base}.txt`;
+    return `tabuada-de-${multiplicador}.txt`;
   } catch (err) {
     throw err;
   }
