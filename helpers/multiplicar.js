@@ -1,5 +1,7 @@
 const fs = require("fs");
 
+const colors = require("colors");
+
 const addLeadingzero = (num) => (num >= 10 ? num : `0${num}`);
 
 const createATextFile = async (base = 5, listar = false) => {
@@ -13,7 +15,7 @@ const createATextFile = async (base = 5, listar = false) => {
     }
 
     if (listar) {
-      console.log(`Tabuada de ${base}`);
+      console.log(`${"Tabuada de".yellow} ${colors.yellow(base)}`);
       console.log(output);
     }
 
