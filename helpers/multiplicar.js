@@ -30,7 +30,7 @@ const createATextFile = async (
       console.log(outputConsole);
     }
 
-    fs.writeFileSync(`tabuada-de-${multiplicador}.txt`, output);
+    fs.writeFileSync(`./output/tabuada-de-${multiplicador}.txt`, output);
 
     return `tabuada-de-${multiplicador}.txt`;
   } catch (err) {
